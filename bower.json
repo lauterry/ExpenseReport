@@ -8,6 +8,7 @@
   ],
   "dependencies": {
     "angular": "~1.0.7",
-    "bootstrap": "http://twitter.github.com/bootstrap/assets/bootstrap.zip"
+    "bootstrap": "http://twitter.github.com/bootstrap/assets/bootstrap.zip",
+    "angular-i18n": "~1.0.7"
   }
 }

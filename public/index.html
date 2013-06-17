@@ -1,20 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="expRepApp">
 <head>
-    <title>Expense Report</title>
+    <title>SFEIR Expense Report</title>
     <link rel="stylesheet" href="stylesheets/bootstrap/bootstrap.css"/>
     <link rel="stylesheet" href="stylesheets/bootstrap/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="stylesheets/style.css"/>
 </head>
 <body>
 
-<header class="hero-unit">
-    <h1>Expense Report</h1>
-    <p>Welcome to Expense Report</p>
+<section class="container">
+
+<header class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">SFEIR Expense Report</a>
+            <div class="nav-collapse collapse">
+               <nav class="nav">
+                   <li class="active"><a href="#">Expense</a></li>
+                    <li><a href="#">History</a></li>
+               </nav>
+            </div>
+
+        </div>
+    </div>
 </header>
+
+<section class="container" ng-view>
+
+</section>
+
+</section>
 
 <script type="text/javascript" src="javascripts/lib/jquery/jquery.js"></script>
 <script type="text/javascript" src="javascripts/lib/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="javascripts/lib/angular/angular.js"></script>
+<script type="text/javascript" src="javascripts/lib/angular/angular-locale_fr-fr.js"></script>
+<script type="text/javascript" src="javascripts/app.js"></script>
+<script type="text/javascript" src="javascripts/services.js"></script>
+<script type="text/javascript" src="javascripts/controllers.js"></script>
+<script type="text/javascript" src="javascripts/filters.js"></script>
+<script type="text/javascript" src="javascripts/directives.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!-- barre d'actions -->
+<form class="well form-inline" name="expenseForm">
+    <input type="date" name="date" ng-model="expense.date" class="span2" autofocus="true" required/>
+    <input type="text" name="label" ng-model="expense.label" placeholder="Libellé" class="span6" required>
+    <div class="input-append">
+        <input type="text" name="amount" ng-model="expense.amount" placeholder="Montant TTC" class="span2" required/>
+        <span class="add-on">€</span>
+    </div>
+    <section class="pull-right">
+        <button class="btn btn-success" ng-disabled="expenseForm.$invalid" ng-click="addExpense(expense);"><i class="icon-plus icon-white"></i> Ajouter</button>
+    </section>
+</form>
+
+<table ng-show="expenses.length > 0" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th class="span2">Date</th>
+            <th>Libellé</th>
+            <th>Montant TTC</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="expense in expenses">
+            <td>{{expense.date | date}}</td>
+            <td>{{expense.label}}</td>
+            <td>{{expense.amount | currency}}</td>
+        </tr>
+    </tbody>
+   <tfoot>
+        <tr>
+            <td colspan="2"></td>
+            <td class="span2">{{report.total | currency}}</td>
+        </tr>
+   </tfoot>
+</table>
+
+<button ng-show="expenses.length > 0" class="btn btn-large btn-block btn-primary">Soumettre la note de frais</button>
+<button ng-show="expenses.length > 0" class="btn btn-small btn-block" ng-click="resetReport()">Réinitialiser</button>
